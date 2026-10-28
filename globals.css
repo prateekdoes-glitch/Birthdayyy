@@ -1,0 +1,15 @@
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font-body);color:var(--ink);line-height:1.6;font-size:clamp(1rem,.95rem + .2vw,1.125rem);overflow-x:hidden;
+background:radial-gradient(circle at 20% 10%,rgba(233,184,197,.14),transparent 45%),radial-gradient(circle at 85% 70%,rgba(232,203,145,.14),transparent 45%),
+repeating-linear-gradient(0deg,rgba(69,58,59,.015) 0 1px,transparent 1px 4px),var(--paper)}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0;font-family:var(--font-display);line-height:1.12}
+p{margin:0 0 var(--s2)}
+.hand{font-family:var(--font-hand);font-size:clamp(1.3rem,1.1rem + 1vw,1.9rem);line-height:1.2;color:var(--rose-dark)}
+.container{max-width:1200px;margin-inline:auto;padding-inline:var(--gutter);padding-block:var(--s6)}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--rose-dark);outline-offset:3px;border-radius:4px}
+main:focus{outline:none}
+button{font:inherit;color:inherit;cursor:pointer}
+code{background:var(--paper-dark);padding:0 .3em;border-radius:3px}

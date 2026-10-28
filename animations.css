@@ -1,0 +1,16 @@
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.92) translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.cover{animation:rise 600ms var(--ease-out) both}
+.cover>*{animation:fade 500ms var(--ease-out) both}.cover>:nth-child(1){animation-delay:.3s}.cover>:nth-child(2){animation-delay:.45s}.cover>:nth-child(3){animation-delay:.6s}.cover>:nth-child(n+4){animation-delay:.8s}
+.hero-text>*{animation:rise var(--dur-hero) var(--ease-out) both}.hero-text>:nth-child(2){animation-delay:.1s}.hero-text>:nth-child(3){animation-delay:.2s}
+.hero-collage .flip-card{animation:rise var(--dur-hero) var(--ease-out) .25s both}.hero-collage .p2{animation-delay:.45s}
+.s2{animation:drift 5s ease-in-out infinite}
+/* reveal: content is visible unless JS adds .js-reveal */
+.js-reveal:not(.is-visible){opacity:0;transform:translateY(24px)}
+.js-reveal{transition:opacity var(--dur-note) var(--ease-out),transform var(--dur-note) var(--ease-out)}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+ .js-reveal:not(.is-visible){opacity:1;transform:none}
+}
